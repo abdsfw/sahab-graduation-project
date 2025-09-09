@@ -18,7 +18,7 @@ class SelectAmenitiesPage extends StatelessWidget {
 
     return WillPopScope(
       onWillPop: () async {
-        nextPostPlaceCubit.checkIfCanMove(context);
+        // nextPostPlaceCubit.checkIfCanMove(context);
         // Navigator.of(context).pop();
         return true;
       },
@@ -29,7 +29,7 @@ class SelectAmenitiesPage extends StatelessWidget {
             children: [
               CustomSimpleAppBarWidget(
                 onIconTap: () {
-                  nextPostPlaceCubit.checkIfCanMove(context);
+                  // nextPostPlaceCubit.checkIfCanMove(context);
                   Navigator.of(context).pop();
                 },
                 iconPath: AppIcons.backArrow,

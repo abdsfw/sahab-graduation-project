@@ -29,7 +29,7 @@ class WeekDayAndWeekEndPriceSection extends StatelessWidget {
         SizedBox(height: 13.h),
         CustomInputField(
           controller: nextPostPlaceCubit.weekdayController,
-          hintText: "70.000 KWD",
+          hintText: "70.000 \$",
           onChange: (p0) {
             nextPostPlaceCubit.checkIfCanPost();
           },
@@ -61,7 +61,7 @@ class WeekDayAndWeekEndPriceSection extends StatelessWidget {
         SizedBox(height: 13.h),
         CustomInputField(
           controller: nextPostPlaceCubit.weekendController,
-          hintText: "56.000 KWD",
+          hintText: "56.000 \$",
           onChange: (p0) {
             nextPostPlaceCubit.checkIfCanPost();
           },

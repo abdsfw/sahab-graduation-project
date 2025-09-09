@@ -100,6 +100,7 @@ class CheckoutCubit extends Cubit<CheckoutState> {
     emit(LoadingCheckoutState());
     var result = await getIt.get<CheckoutRepo>().addBooking(data: data);
     result.fold((error) {
+      debugPrint('error.errMassage: ${error.errMassage}');
       emit(FirstFailureCheckoutState(error.errMassage));
     }, (addBookingResponse) {
       this.bookingResponse = addBookingResponse;

@@ -91,7 +91,7 @@ class ReservationDataContainer extends StatelessWidget {
               SizedBox(height: 4.h),
               RowDataItem(
                 firstData: categoryTitle,
-                secondData: "$amount KD",
+                secondData: "$amount \$",
                 textStyle: AppStyles.textStyle16w400DarkBlue(context),
               ),
               SizedBox(height: 16.h),

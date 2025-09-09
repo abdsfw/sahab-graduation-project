@@ -68,10 +68,10 @@ class LoginScreen extends StatelessWidget {
                       validator: (value) {
                         if (value!.isEmpty) {
                           return S.of(context).empty_field_message;
-                        } else if (value.length < 8) {
+                        } else if (value.length < 10) {
                           return S
                               .of(context)
-                              .phone_must_be_digital; //"phone must be 8 digital";
+                              .phone_must_be_digital; //"phone must be 10 digital";
                         }
                         return null;
                       },

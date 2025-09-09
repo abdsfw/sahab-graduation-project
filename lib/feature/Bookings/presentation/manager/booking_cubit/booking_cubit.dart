@@ -27,6 +27,7 @@ class BookingCubit extends Cubit<BookingState> {
         emit(FailureFetchDetailsBookingState(failure.errMassage));
       }, (bookingDetails) {
         this.bookingPlaceDetailsData = bookingDetails;
+        debugPrint('bookingDetails: ${bookingDetails.toJson()}');
         emit(SuccessFetchDetailsBookingState());
       });
     } else {

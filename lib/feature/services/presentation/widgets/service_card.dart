@@ -48,7 +48,7 @@ class ServicesCard extends StatelessWidget {
             SizedBox(
               width: 30.w,
             ),
-            CustomCachedSvgImage(
+            CustomCachedIconImage(
               height: 30,
               width: 30,
               imageUrl: "${Constant.baseUrl}/${category.icon ?? ""}",

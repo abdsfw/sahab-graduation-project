@@ -132,7 +132,7 @@ class PlacePostDetailsBody extends StatelessWidget {
           postTitle: placeDetails.title ?? "",
           tag: AppFunction.typeTranslate(placeDetails.tag ?? "", context),
           secondTitle:
-              "${S.of(context).starting_from} ${placeDetails.weekdayPrice} KD",
+              "${S.of(context).starting_from} ${placeDetails.weekdayPrice} \$",
         ),
         Divider(),
         AmenitiesListView(

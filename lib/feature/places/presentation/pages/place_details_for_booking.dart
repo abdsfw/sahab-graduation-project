@@ -68,7 +68,7 @@ class PlacesDetailsForBooKing extends StatelessWidget {
               height: 16.h,
             ),
             Text(
-              "${S.of(context).starting_from} ${placeDetailsModel?.weekdayPrice.toString()} KD",
+              "${S.of(context).starting_from} ${placeDetailsModel?.weekdayPrice.toString()} \$",
               style: AppStyles.style16w500(context),
             ),
             SizedBox(

@@ -73,7 +73,7 @@ class BookingDetailsPage extends StatelessWidget {
                     builder: (context, state) {
                       if (state is LoadingFetchDetailsBookingState) {
                         return Expanded(
-                          child: Center(
+                          child: const Center(
                             child: CustomCircularProgressIndicator(),
                           ),
                         );
@@ -194,12 +194,12 @@ class BookingDetailsBody extends StatelessWidget {
                 ),
                 SizedBox(height: 26.h),
                 PaymentDetails(
-                  bookingAmount: data.bookings.totalPrice ?? "",
-                  discount: data.bookings.discount ?? "",
+                  bookingAmount: data.bookings.totalPrice.toString(),
+                  discount: data.bookings.discount.toString(), // ?? "",
                   invoiceReference: data.bookings.invoiceReference ?? "",
                   paymentMethod: data.bookings.paymentMethod ?? " ",
                   referenceId: data.bookings.referenceId ?? "",
-                  total: data.bookings.total ?? "",
+                  total: data.bookings.total.toString(), //?? "",
                   transactionId: data.bookings.transactionId ?? "",
                 ),
                 SizedBox(height: 31.h),

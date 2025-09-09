@@ -81,7 +81,7 @@ class PlacesCardTest extends StatelessWidget {
               height: 10.h,
             ),
             Text(
-              "${S.of(context).starting_from} ${placeDetailsModel?.weekdayPrice.toString()} KD",
+              "${S.of(context).starting_from} ${placeDetailsModel?.weekdayPrice.toString()} \$",
               style: AppStyles.style16w500(context),
             ),
             SizedBox(

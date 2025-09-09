@@ -39,6 +39,7 @@ class PlacesCard extends StatelessWidget {
   final String title;
   @override
   Widget build(BuildContext context) {
+    debugPrint('imagePath: ${imagePath}');
     return GestureDetector(
       //! this for display place details
       onTap: () async {
@@ -158,7 +159,7 @@ class PlacesCard extends StatelessWidget {
               ),
               // ! price
               Text(
-                "${S.of(context).starting_from} $price KD",
+                "${S.of(context).starting_from} $price \$",
                 maxLines: 1,
                 style: AppStyles.style16w500(context).copyWith(
                   letterSpacing: -0.16,

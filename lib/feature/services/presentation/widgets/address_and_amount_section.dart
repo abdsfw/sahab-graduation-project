@@ -53,7 +53,7 @@ class AddressAndAmountSection extends StatelessWidget {
               ),
             ),
             CustomAppTitle(
-              title: "${cubit.price} KD",
+              title: "${cubit.price} \$",
               style: AppStyles.textStyle20w600DarkBlue(context).copyWith(
                 fontWeight: FontWeight.w500,
                 fontSize: 18.sp,

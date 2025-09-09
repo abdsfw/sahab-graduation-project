@@ -37,6 +37,7 @@ class CategoryCard extends StatelessWidget {
   final int categoryId;
   @override
   Widget build(BuildContext context) {
+    debugPrint('icons: ${Constant.baseUrl}/${category.icon}');
     return GestureDetector(
       onTap: () {
         print("category id: $categoryId");
@@ -57,7 +58,7 @@ class CategoryCard extends StatelessWidget {
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(5))),
             child: Center(
-              child: CustomCachedSvgImage(
+              child: CustomCachedIconImage(
                 imageUrl: "${Constant.baseUrl}/${category.icon}",
                 width: 48.w,
                 height: 46.h,

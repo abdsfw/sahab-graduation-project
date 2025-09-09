@@ -46,6 +46,7 @@ class PostCard extends StatelessWidget {
   // todo : finish translate
   @override
   Widget build(BuildContext context) {
+    debugPrint('urlPath : ${Constant.baseUrl}$urlPath');
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 14.w),
       // width: 319.w,

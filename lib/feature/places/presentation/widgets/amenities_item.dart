@@ -19,7 +19,8 @@ class AmenitiesItem extends StatelessWidget {
   final String? imageUrl;
   @override
   Widget build(BuildContext context) {
-    // print("${Constant.baseUrl}$imageUrl");
+    // debugPrint('imageUrl: ${imageUrl}');
+    print("imageUrl a: ${Constant.baseUrl}/$imageUrl");
     return Padding(
       padding: EdgeInsetsDirectional.only(start: 16.w, bottom: 20.h),
       child: Row(
@@ -32,8 +33,8 @@ class AmenitiesItem extends StatelessWidget {
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5), color: Colors.white),
-            child:
-                CustomCachedSvgImage(imageUrl: "${Constant.baseUrl}/$imageUrl"),
+            child: CustomCachedIconImage(
+                imageUrl: "${Constant.baseUrl}/$imageUrl"),
             // CachedNetworkImage(
             //   imageUrl: "${Constant.baseUrl}$imageUrl" ?? "",
             //   errorWidget: (context, url, error) {

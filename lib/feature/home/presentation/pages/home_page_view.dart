@@ -427,8 +427,14 @@ class _HomePageBodyState extends State<HomePageBody> {
                             if (placeCubit.homeFeaturedPlaces[index].placeImages
                                     ?.isNotEmpty ??
                                 false) {
-                              imagePath = placeCubit.homeFeaturedPlaces[index]
-                                      .placeImages?[0].image ??
+                              imagePath = placeCubit
+                                      .homeFeaturedPlaces[index]
+                                      .placeImages?[placeCubit
+                                              .homeFeaturedPlaces[index]
+                                              .placeImages!
+                                              .length -
+                                          1]
+                                      .image ??
                                   "";
                             }
                             return PlacesCard(

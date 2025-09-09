@@ -99,12 +99,12 @@ class FirstCardBookingDetails extends StatelessWidget {
             ),
             if (address != null)
               Text(
-                "${S.of(context).starting_from} ${weekdayPrice.toString()} KD",
+                "${S.of(context).starting_from} ${weekdayPrice.toString()} \$",
                 style: AppStyles.style16w500(context),
               ),
             if (address == null)
               Text(
-                "${weekdayPrice.toString()} KD",
+                "${weekdayPrice.toString()} \$",
                 style: AppStyles.style16w500(context),
               ),
             SizedBox(

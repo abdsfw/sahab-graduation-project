@@ -173,7 +173,7 @@ class SpecialDayItem extends StatelessWidget {
               ),
             ),
             CustomAppTitle(
-              title: "${data.price} KD",
+              title: "${data.price} \$",
               style: AppStyles.textStyle16w400DarkBlue(context).copyWith(
                 fontWeight: FontWeight.w600,
               ),

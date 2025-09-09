@@ -112,7 +112,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "contact_us": MessageLookupByLibrary.simpleMessage("اتصل بنا"),
         "contacts_us": MessageLookupByLibrary.simpleMessage("اتصل بنا"),
         "daily_sales":
-            MessageLookupByLibrary.simpleMessage("المبيعات اليومية(KD)"),
+            MessageLookupByLibrary.simpleMessage("المبيعات اليومية(\$)"),
         "date": MessageLookupByLibrary.simpleMessage("التاريخ"),
         "delete": MessageLookupByLibrary.simpleMessage("حذف"),
         "delete_post": MessageLookupByLibrary.simpleMessage("حذف الإعلان"),

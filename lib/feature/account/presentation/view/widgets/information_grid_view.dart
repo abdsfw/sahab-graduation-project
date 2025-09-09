@@ -41,7 +41,7 @@ class GridViewInformationWidget extends StatelessWidget {
           fText: staticValueCubit.staticValue.day == null
               ? ""
               : staticValueCubit.staticValue.day.toString(),
-          sText: S.of(context).daily_sales, //'Daily Sales(KD)',
+          sText: S.of(context).daily_sales, //'Daily Sales(\$)',
         ),
         InformationWidget(
           color: AppColor.purpleColor,

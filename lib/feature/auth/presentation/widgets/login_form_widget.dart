@@ -49,7 +49,7 @@ class LoginFormWidget extends StatelessWidget {
             child: TextFormField(
               controller: loginCubit.numberController,
               keyboardType: TextInputType.number,
-              maxLength: 8,
+              maxLength: 10,
               onTapOutside: (event) {
                 FocusManager.instance.primaryFocus?.unfocus();
               },

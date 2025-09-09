@@ -49,7 +49,7 @@ class PlaceModel {
     return PlaceModel(
       id: json['id'] as int?,
       title: json['title'] as String?,
-      image: json['image'] as String?,
+      image: json['main_image'] as String?,
       address: json['address'] as String?,
       description: json['description'] as String?,
       featured: json['featured'] as int?,

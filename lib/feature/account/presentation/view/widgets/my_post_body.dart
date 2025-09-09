@@ -130,11 +130,16 @@ class PlaceVendorPostListView extends StatelessWidget {
                     title: state.placeVendorList[index].title ?? "null",
                     typeToggle: TypeToggle.place,
                     imagePath: Constant.kPlaceImage,
-                    urlPath: state
-                            .placeVendorList[index].placeImages!.isNotEmpty
-                        ? state.placeVendorList[index].placeImages![0].image ??
-                            ""
-                        : "",
+                    urlPath:
+                        state.placeVendorList[index].placeImages!.isNotEmpty
+                            ? state
+                                    .placeVendorList[index]
+                                    .placeImages![state.placeVendorList[index]
+                                            .placeImages!.length -
+                                        1]
+                                    .image ??
+                                ""
+                            : "",
                   ),
                 );
               },

@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sahab/core/errors/failures.dart';
 import 'package:sahab/core/utils/api_service.dart';
@@ -42,12 +43,16 @@ class CategoryRepoImpl implements CategoryRepo {
       fetchPlaceForOneCategory(
           {int pageNumber = 0, int? categoryId, String? query}) async {
     try {
+      debugPrint('query: ${query}');
+      debugPrint('categoryId: ${categoryId}');
+      debugPrint('pageNumber: ${pageNumber}');
       List<PlaceModel> placeList = [];
       var response;
       if (query != null) {
         response = await getIt.get<ApiService>().get(
-            endPoint:
-                "/categories/$categoryId/places?page=$pageNumber&per_page=5&$query");
+              endPoint:
+                  "/categories/$categoryId/places?page=$pageNumber&per_page=5&$query",
+            );
       } else {
         response = await getIt.get<ApiService>().get(
             endPoint:

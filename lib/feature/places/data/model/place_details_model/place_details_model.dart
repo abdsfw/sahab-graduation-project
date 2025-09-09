@@ -9,7 +9,7 @@ class PlaceDetailsModel {
   num? weekendPrice;
   String? title;
   int? bookable;
-  int? available;
+  // int? available;
   String? address;
   String? area;
   String? tag;
@@ -27,7 +27,7 @@ class PlaceDetailsModel {
     this.weekendPrice,
     this.title,
     this.bookable,
-    this.available,
+    // this.available,
     this.address,
     this.area,
     this.tag,
@@ -47,7 +47,7 @@ class PlaceDetailsModel {
       weekendPrice: json['weekend_price'] as num?,
       title: json['title'] as String?,
       bookable: json['bookable'] as int?,
-      available: json['available'] as int?,
+      // available: json['available'] as int?,
       address: json['address'] as String?,
       area: json['area'] as String?,
       tag: json['tag'] as String?,
@@ -75,7 +75,7 @@ class PlaceDetailsModel {
         'weekend_price': weekendPrice,
         'title': title,
         'bookable': bookable,
-        'available': available,
+        // 'available': available,
         'address': address,
         'area': area,
         'tag': tag,

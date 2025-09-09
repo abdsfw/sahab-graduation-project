@@ -303,7 +303,7 @@ class AppFunction {
                   SizedBox(height: 13.h),
                   CustomInputField(
                     controller: nextPostPlaceCubit.priceSpecialDateController,
-                    hintText: "1000.000 KWD",
+                    hintText: "1000.000 \$",
                     onChange: (p0) {
                       BlocProvider.of<SpecialDateCubit>(context)
                           .checkIfCanAdd(context);

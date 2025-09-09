@@ -26,6 +26,7 @@ import 'package:sahab/feature/checkout/presentation/views/failed_checkout_page.d
 import 'package:sahab/feature/checkout/presentation/views/success_checkout_page.dart';
 import 'package:sahab/feature/checkout/presentation/views/widget/checkout_page_body.dart';
 import 'package:sahab/feature/checkout/presentation/views/widget/webview_page.dart';
+import 'package:sahab/feature/home/presentation/pages/home_page_view.dart';
 import 'package:shimmer/shimmer.dart';
 // import '../../../../core/utils/widgets/custom_app_sub_title.dart';
 import '../../../../core/utils/widgets/custom_app_title.dart';
@@ -80,16 +81,22 @@ class CheckOutPage extends StatelessWidget {
             listener: (context, state) {
               // TODO: implement listener
               if (state is FirstSuccessCheckoutState) {
-                Navigator.of(context).push(
+                Navigator.of(context).pushReplacement(
                   CupertinoPageRoute(
-                    builder: (context) => WebViewScreen(
-                      address: address,
-                      categoryTitle: bookingTitle,
-                      url: state.bookingResponse.invoiceData?.invoiceUrl ?? "",
-                      typeToggle: typeToggle,
-                    ),
+                    builder: (context) => const HomePageView(),
                   ),
                 );
+
+                // Navigator.of(context).push(
+                //   CupertinoPageRoute(
+                //     builder: (context) => WebViewScreen(
+                //       address: address,
+                //       categoryTitle: bookingTitle,
+                //       url: state.bookingResponse.invoiceData?.invoiceUrl ?? "",
+                //       typeToggle: typeToggle,
+                //     ),
+                //   ),
+                // );
               }
             },
             builder: (context, checkoutState) {
@@ -104,7 +111,7 @@ class CheckOutPage extends StatelessWidget {
               return ModalProgressHUD(
                 inAsyncCall: promoState is LoadingPromoCode ||
                     checkoutState is LoadingCheckoutState,
-                progressIndicator: CustomCircularProgressIndicator(),
+                progressIndicator: const CustomCircularProgressIndicator(),
                 child: WillPopScope(
                   onWillPop: () async {
                     // Navigator.of(context).pop();
@@ -126,7 +133,7 @@ class CheckOutPage extends StatelessWidget {
                         BlocBuilder<PaymentCubit, PaymentState>(
                           builder: (context, state) {
                             if (state is LoadingFetchPaymentState) {
-                              return Expanded(
+                              return const Expanded(
                                   child: Center(
                                 child: CustomCircularProgressIndicator(),
                               ));
@@ -146,7 +153,7 @@ class CheckOutPage extends StatelessWidget {
                                 serviceAddress: address,
                               );
                             }
-                            return SizedBox(
+                            return const SizedBox(
                               child: Text("error"),
                             );
                           },
@@ -181,20 +188,20 @@ class CheckOutPaymentDetails extends StatelessWidget {
             SizedBox(height: 12.h),
             RowDataItem(
               firstData: S.of(context).booking_amount,
-              secondData: "${checkoutCubit.price.toStringAsFixed(3)} KD",
+              secondData: "${checkoutCubit.price.toStringAsFixed(3)} \$",
               textStyle: AppStyles.textStyle16w400Black(context),
             ),
             SizedBox(height: 10.h),
             RowDataItem(
               firstData: S.of(context).discount,
               secondData:
-                  "${checkoutCubit.discountPrice.toStringAsFixed(3)} KD",
+                  "${checkoutCubit.discountPrice.toStringAsFixed(3)} \$",
               textStyle: AppStyles.textStyle16w400Black(context),
             ),
             SizedBox(height: 10.h),
             RowDataItem(
               firstData: S.of(context).total,
-              secondData: "${checkoutCubit.totalPrice.toStringAsFixed(3)} KD",
+              secondData: "${checkoutCubit.totalPrice.toStringAsFixed(3)} \$",
               textStyle: AppStyles.textStyle17w700Blue(context),
             ),
             SizedBox(height: 30.h),
@@ -228,10 +235,10 @@ class PaymentMethodSection extends StatelessWidget {
               return BlocBuilder<CheckoutCubit, CheckoutState>(
                 builder: (context, state) {
                   return ListView.separated(
-                    separatorBuilder: (context, index) => SizedBox(),
+                    separatorBuilder: (context, index) => const SizedBox(),
                     itemCount: paymentCubit.paymentMethodList.length,
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) => ItemPaymentMethod(
                       iconPath: paymentCubit.paymentMethodList[index].photo ??
                           "", // AppIcons.kentPayment,
@@ -250,7 +257,7 @@ class PaymentMethodSection extends StatelessWidget {
                 },
               );
             } else {
-              return SizedBox();
+              return const SizedBox();
             }
           },
         ),
@@ -276,6 +283,7 @@ class ItemPaymentMethod extends StatelessWidget {
   final Function(dynamic value) onChange;
   @override
   Widget build(BuildContext context) {
+    debugPrint("payment icons: ${Constant.baseUrl}$iconPath");
     return GestureDetector(
       onTap: () {
         onChange(value);
@@ -302,9 +310,9 @@ class ItemPaymentMethod extends StatelessWidget {
                   ),
                 );
               },
-              imageUrl: "${Constant.baseUrl}$iconPath",
+              imageUrl: "${Constant.baseUrl}/$iconPath",
               errorWidget: (context, url, error) {
-                return Icon(Icons.error);
+                return const Icon(Icons.error);
                 // Image.asset(
                 //   imagePathOnError,
                 //   fit: BoxFit.cover,
@@ -415,7 +423,7 @@ class PromoCodeSection extends StatelessWidget {
                 ),
               );
             }
-            return SizedBox();
+            return const SizedBox();
           },
         ),
         SizedBox(height: 11.h),

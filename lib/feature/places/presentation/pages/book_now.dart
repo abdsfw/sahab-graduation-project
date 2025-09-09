@@ -129,7 +129,7 @@ class BookNowBody extends StatelessWidget {
               BlocBuilder<PlaceBookingDateCubit, PlaceBookingDateState>(
                 builder: (context, state) {
                   return Text(
-                    "${cubit.totalPrice.toStringAsFixed(3)} KD",
+                    "${cubit.totalPrice.toStringAsFixed(3)} \$",
                     style: AppStyles.style18semibold(context),
                   );
                 },

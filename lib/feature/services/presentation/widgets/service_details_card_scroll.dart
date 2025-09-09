@@ -71,7 +71,7 @@ class ServiceDetailsCardScroll extends StatelessWidget {
               height: 10.h,
             ),
             Text(
-              "${price.toStringAsFixed(3)} KD", // "30.000 KD",
+              "${price.toStringAsFixed(3)} \$", // "30.000 \$",
               style: AppStyles.style16w500(context),
             ),
             SizedBox(

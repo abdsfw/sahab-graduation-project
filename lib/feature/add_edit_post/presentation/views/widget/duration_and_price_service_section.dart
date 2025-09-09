@@ -54,7 +54,7 @@ class DurationAndPriceServiceSection extends StatelessWidget {
         SizedBox(height: 13.h),
         CustomInputField(
           controller: nextPostServiceCubit.priceController,
-          hintText: "70.000 KWD",
+          hintText: "70.000 \$",
           onChange: (p0) {
             nextPostServiceCubit.checkIfCanPost();
           },

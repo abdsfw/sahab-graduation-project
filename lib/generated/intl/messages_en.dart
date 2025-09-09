@@ -119,7 +119,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Contact Details"),
         "contact_us": MessageLookupByLibrary.simpleMessage("Contact us"),
         "contacts_us": MessageLookupByLibrary.simpleMessage("Contacts us"),
-        "daily_sales": MessageLookupByLibrary.simpleMessage("Daily Sales(KD)"),
+        "daily_sales": MessageLookupByLibrary.simpleMessage("Daily Sales(\$)"),
         "date": MessageLookupByLibrary.simpleMessage("Date"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "delete_post": MessageLookupByLibrary.simpleMessage("Delete Post"),

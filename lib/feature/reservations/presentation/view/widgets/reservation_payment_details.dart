@@ -61,13 +61,13 @@ class ReservationPaymentDetails extends StatelessWidget {
         SizedBox(height: 12.h),
         RowDataItem(
           firstData: S.of(context).booking_amount,
-          secondData: "$bookingAmount KD", //"1500.000 KD",
+          secondData: "$bookingAmount \$", //"1500.000 \$",
           textStyle: AppStyles.textStyle16w400Black(context),
         ),
         SizedBox(height: 12.h),
         RowDataItem(
           firstData: S.of(context).discount,
-          secondData: "$discount KD", //"0.000 KD",
+          secondData: "$discount \$", //"0.000 \$",
           textStyle: AppStyles.textStyle16w400Black(context),
         ),
         SizedBox(height: 12.h),
@@ -76,7 +76,7 @@ class ReservationPaymentDetails extends StatelessWidget {
         ),
         RowDataItem(
           firstData: S.of(context).total,
-          secondData: "$total KD",
+          secondData: "$total \$",
           textStyle: AppStyles.textStyle17w700Blue(context),
         ),
       ],
